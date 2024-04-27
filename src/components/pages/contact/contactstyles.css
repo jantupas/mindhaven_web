@@ -18,8 +18,9 @@ body {
 }
 .contact-title{
     padding-top: 150px;
-    padding-bottom: 50px;
+    padding-bottom: 10px;
     text-align: center;
+    font-family: cursive;
 }
 .contact-title > h1 {
     font-weight: 700;
@@ -29,7 +30,6 @@ body {
 }
 .contact-title > p {
     color: darkslategray;
-    padding-bottom: 40px;
     font-size: 1.3rem;
 }
 .contact-form {
@@ -116,8 +116,9 @@ body {
 }
 .next-title{
     padding-top: 100px;
-    padding-bottom: 50px;
+    padding-bottom: 1   0px;
     text-align: center;
+    font-family: cursive;
 }
 .next-title > h1 {
     font-weight: 700;
@@ -127,7 +128,6 @@ body {
 }
 .next-title > p {
     color: darkslategray;
-    padding-bottom: 40px;
     font-size: 1.3rem;
 }
 .map-content {

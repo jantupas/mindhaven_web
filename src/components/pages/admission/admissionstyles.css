@@ -27,17 +27,18 @@ body {
 }
 .ad-img {
     width: 100%;
-    height: 500px;
+    height: 70vh;
 }
 .adm-title {
     padding-top: 30px;
     text-align: center;
+    font-family: cursive;
 }
 .adm-title > h1 {
     font-weight: 700;
     font-size: 3rem;
     color: darkgreen;
-    letter-spacing: -3px;
+    letter-spacing: -2px;
     padding-bottom: 5px;
 }
 .adm-title > p{

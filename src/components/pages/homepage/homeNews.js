@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from "react"
-import news_img1 from "./news_img1.png"
-import news_img2 from "./news_img2.png"
 import { db } from "../../../firebase"
 import { getDocs, collection, limit, query, orderBy } from "firebase/firestore"
 import "./homepage.css"

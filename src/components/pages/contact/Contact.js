@@ -25,9 +25,6 @@ function Contact () {
                     <p>You may also reach us through our Facebook page, emails, or telephone.</p>
                 </div>
                 <Other />
-                <br />
-                <br />
-                <Newsform />
             </div>
         </div>
     )

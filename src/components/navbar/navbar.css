@@ -43,18 +43,16 @@ body {
     
 }
 .page {
-    transition: background-color 0.3s, color 0.3s;
-    padding: 5px;
-    border-radius: 9px;
-}
-.page:hover{
-    color: darkgreen;
-    background-color: yellow;
-}
-.page {
+    padding: 0px 2px;
     cursor: pointer;
     text-decoration: none;
     color: yellow;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom-color 0.3s;
 }
+.page:hover{
+    border-bottom-color: yellow;
+}
+
 @media screen and (max-width: 600px) {
 }

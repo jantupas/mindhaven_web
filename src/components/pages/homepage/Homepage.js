@@ -7,19 +7,33 @@ import Homenews from "./homeNews"
 import Map from "../contact/Map"
 import Carousell from "./Carousell"
 import image1 from "./image1.jpg"
-import img1 from "./imgexp.jpg"
-import img2 from "./imgexp2.jpg"
-import img3 from "./imgplay.jpg"
-import img4 from "./imgplay2.jpg"
-import img5 from "./imgprog.jpg"
-import img6 from "./imgprog2.jpg"
+import img1 from "../../images/capimg1.jpg"
+import img2 from "../../images/capimg2.jpg"
+import img3 from "../../images/capimg3.jpg"
+import img4 from "../../images/capimg4.jpg"
+import img5 from "../../images/capimg5.jpg"
+import img6 from "../../images/capimg6.jpg"
+import img7 from "../../images/capimg7.jpg"
+import img8 from "../../images/capimg8.jpg"
+import img9 from "../../images/capimg9.jpg"
+import img10 from "../../images/capimg10.jpg"
+import img11 from "../../images/capimg11.jpg"
+import img12 from "../../images/capimg12.jpg"
+import img13 from "../../images/capimg13.jpg"
 
 
 function Homepage (){
-    const images = [image1, img1, img2, img3, img4, img5, img6]
+    const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img13]
     return (
         <div className="whole-home-container">
             <div className="home-background">
+            <div className="home-welcome-image">
+                    <img src={image1} alt="welcome" className="welcome-image"/>
+                </div>
+                <div className="home-welcome">
+                    <h1>A Warm and Hearty Welcome to <br /> MindHaven School Inc</h1>
+                    <p>A Place to Learn, Laugh, and Love, MindHaven has 30+ years of experience as a play-based non-traditional school.</p>
+                </div>
                 <div className="image-carousell-home">
                     <Carousell images={images}/>
                 </div>
