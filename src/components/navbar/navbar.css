@@ -36,13 +36,20 @@ body {
     list-style-type: none;
 }
 .page-link > ul li {   
-    padding-left: 30px;
+    padding-left: 20px;
     padding-right: 20px; 
     font-size: 1.1rem;
-    letter-spacing: -0.5px;;
+    letter-spacing: -0.5px;
+    
+}
+.page {
+    transition: background-color 0.3s, color 0.3s;
+    padding: 5px;
+    border-radius: 9px;
 }
 .page:hover{
-    color: white;
+    color: darkgreen;
+    background-color: yellow;
 }
 .page {
     cursor: pointer;

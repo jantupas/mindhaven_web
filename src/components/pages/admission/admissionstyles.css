@@ -22,6 +22,8 @@ body {
     display: flex;
     justify-content: center;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    max-width: 100%;
+    overflow: hidden;
 }
 .ad-img {
     width: 100%;
@@ -130,10 +132,10 @@ body {
     color: white;
     padding: 15px 20px;
     border-radius: 5px;
-    z-index: 9999; /* Ensure it appears above other content */
+    z-index: 9999; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: opacity 0.3s ease-in-out;
-    opacity: 0; /* Initially hidden */
+    opacity: 0; 
     transition: opacity 0.3s ease-in-out;   
 }
 
@@ -142,8 +144,8 @@ body {
 }
 
 .submission-message.show {
-    opacity: 1; /* Show the message */
-    animation: fadeIn 0.5s ease forwards; /* Apply fade-in animation */
+    opacity: 1; 
+    animation: fadeIn 0.5s ease forwards;
 }
 
 @keyframes fadeIn {

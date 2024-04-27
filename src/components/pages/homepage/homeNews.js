@@ -32,14 +32,9 @@ function Homenews (){
         <div>
             {newsData.map((news, index) => (
                 <div className="announcement-container">
-                <img 
-                    src={index === 0 ? news_img1 : news_img2} 
-                    alt="school news image" 
-                    className="home-image3" 
-                />
                 <div key={news.id} className="announcement-description">
-                    <h2>{news.title}</h2>
-                    <p>{news.date.toDate().toLocaleDateString()}</p>
+                    <h2 className="home-ann-title">{news.title}</h2>
+                    <p className="home-ann-date">{news.date.toDate().toLocaleDateString()}</p>
                     <p className="home-ann-description">{news.content}</p>
                     <Link to="../announcement" className="read-more">READ MORE</Link>
                 </div>

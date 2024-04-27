@@ -24,21 +24,21 @@ function Homepage (){
                     <Carousell images={images}/>
                 </div>
                 <div className="home-title">
-                    <h1>FEATURED ANNOUNCEMENTS</h1>
+                    <h1>Featured Announcements</h1>
                     <p>The featured announcements provided by the school.</p>
                 </div>
                 <div className="home-anns">
                     <Homeannounce/>
                 </div>
                 <div className="home-title">
-                    <h1>LATEST NEWS AND EVENTS</h1>
+                    <h1>Latest News and Events</h1>
                     <p>The latest news and events provided by the school.</p>
                 </div>
                 <div className="home-anns">
                     <Homenews/>
                 </div>
                 <div className="home-title">
-                    <h1>VISIT OUR LOCATION</h1>
+                    <h1>Visit Our Location</h1>
                     <p>You can visit us by using the map to see our location.</p>
                 </div>
                 <div className="home-map">

@@ -11,14 +11,14 @@ function Announcement () {
             <div className="ann-background">
                 <div>
                     <div className="ann-page-title">
-                        <h1>OFFICIAL SCHOOL ANNOUNCEMENTS</h1>
+                        <h1>Official School Announcements</h1>
                         <p>All the official announcements provided by the school.</p>
                     </div>
                     <Announcementcont />
                 </div>
                 <div>
                 <div className="ann-page-news">
-                        <h1>LATEST NEWS</h1>
+                        <h1>Latest News</h1>
                         <p>All the latest news and updates provided by the school.</p>
                     </div>
                     <Newscont />

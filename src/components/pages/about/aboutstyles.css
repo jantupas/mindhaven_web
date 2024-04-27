@@ -53,3 +53,6 @@ body {
 .imgexp {
     max-width: 560px;
 }
+.exp-img-container {
+    overflow: hidden;
+}

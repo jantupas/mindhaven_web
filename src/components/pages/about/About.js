@@ -10,7 +10,7 @@ function About () {
         <div className="whole-about-container">
             <div className="about-background">
                 <div className="about-title">
-                    <h1>Who We Are...</h1>
+                    <h1>Who We Are</h1>
                     <p>Get to know our school.</p>
                 </div>
                 <Vismis id="vismis"/>

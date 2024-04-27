@@ -29,14 +29,14 @@ body {
     padding-bottom: 70px;
 }
 .home-title {
-    padding: 30px 0px 30px 0px;
+    padding: 80px 0px 30px 0px;
     text-align: center;
 }
 .home-title > h1 {
     font-weight: 700;
     font-size: 3rem;
     color: darkgreen;
-    letter-spacing: -3px;
+    letter-spacing: -1px;
     padding-bottom: 5px;
 }
 .home-title > p{
@@ -44,7 +44,7 @@ body {
     font-size: 1.3rem;
 }
 .announcement-container {
-    max-width: 1000px;
+    max-width: 900px;
     background-color: #fafafa;
     display: flex;
     border-radius: 9px;
@@ -52,35 +52,41 @@ body {
     margin: 0 auto;
     margin-bottom: 30px;
 }
-.home-image2, .home-image3{
-    width: 500px;
-    border-radius: 9px 0px 0px 9px;
-}
 .announcement-description {
     display: flex;
     flex-direction: column;
-    max-width: 500px;
-    padding: 20px;
+    padding: 40px 50px;
 }
-.announcement-description > p {
+.home-ann-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: -1px;
+}
+.home-ann-date {
     padding-top: 20px;
+}
+.home-ann-description {
     text-align: justify;
     color: darkslategray;
 }
 .read-more {
-    margin-top: auto;
-    padding-bottom: 20px;
+    width: 120px;
+    padding: 5px 0px;
     text-align: center; 
+    margin: auto;
     font-size: 1.2rem;
     letter-spacing: -1px;
-    color: black;
+    color: darkgreen;
     font-weight: 600;
     text-decoration: none;
+    border-radius: 9px;
+    transition: background-color 0.3s, color 0.3s;
 }
 .read-more:hover {
     cursor: pointer;
     text-decoration: none;
-    color: green;
+    color: yellow;
+    background-color: green;
 }
 .home-anns {
     padding-bottom: 30px;
@@ -139,7 +145,7 @@ body {
     overflow: hidden;
   }
   
-  .carousel-image {
+.carousel-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -150,9 +156,9 @@ body {
     transition: opacity 1s ease-in-out; 
   }
   
-  .carousel-image.active {
+.carousel-image.active {
     opacity: 1; 
   }
 .image-carousell-home {
-    padding-bottom: 50px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
