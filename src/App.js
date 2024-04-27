@@ -32,6 +32,7 @@ function App() {
                 <Nav />
                 <Routes>
                     <Route path="/" element={<Template />}>
+                        <Route index element={<Homepage />} />
                         <Route path="/homepage" element={<Homepage />} />
                         <Route path="/contact" element={<Contact />} />
                         <Route path="/announcement" element={<Announcement />} />
