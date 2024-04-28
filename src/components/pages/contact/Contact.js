@@ -3,7 +3,6 @@ import { Link } from "react-router-dom"
 import Form from "./Form"
 import Map from "./Map"
 import Other from "./Other"
-import Newsform from "./Newsform"
 import "./contactstyles.css"
 
 function Contact () {

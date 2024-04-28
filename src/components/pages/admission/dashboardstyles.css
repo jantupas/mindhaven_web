@@ -7,7 +7,7 @@ body {
     background-color: #F4F3F2;
 }
 .adm-dash-nav {
-    margin-top: 100px;
+    margin-top: 120px;
     width: 100%;
 }
 .nav-content {
@@ -17,19 +17,18 @@ body {
     
 }
 .nav-item{
-    margin: 0px 20px;
-    padding: 10px 20px;
+    margin: 0px 30px;
+    padding: 0px 2px;
     font-size: 1.5rem;
     text-decoration: none;
     color: darkgreen;
     font-weight: 600;
     letter-spacing: -1px;
-    border-radius: 9px;
-    transition: color 0.3s, background-color 0.3s;
+    border-bottom: 3px solid transparent;
+    transition: border-bottom-color 0.3s;
 }
 .nav-item:hover{
-    background-color: darkgreen;
-    color: yellow;
+    border-bottom-color: green;
 }
 .admdash-ann-cont {
     margin: 70px auto auto auto;
@@ -124,7 +123,245 @@ body {
 .adm-ann-container > textarea {
     height: 300px;
 }
-.ann-modify-btn-con{
+.ann-modify-btn-con {
     display: grid;
     grid-template: auto / 1fr 1fr;
+}
+.ann-delete-btn {
+    margin: auto;
+    height: 30px;
+    width: 100px;
+    background-color: red;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    border-radius: 9px;
+    border-width: 0px;
+    margin-top: 10px;
+}
+.ann-delete-btn:hover {
+    cursor: pointer;
+    background-color: darkred;
+}
+.add-container {
+    margin-top: 50px;
+}
+.add-title {
+    text-align: center;
+    color: darkgreen;
+    font-size: 2.5rem;
+    letter-spacing: -3px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.app-dash-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: darkgreen;
+    letter-spacing: -3px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+.application-table {
+    border-collapse: collapse;
+    border: 1px solid black;
+    margin: auto;
+}
+.application-table th,
+.application-table td {
+  border: 1px solid black; 
+  padding: 8px;
+}
+
+.application-table th {
+  background-color: #f2f2f2; 
+}
+.app-table-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.app-table-content {
+    padding: 10px 30px;
+}
+.app-dash-cont {
+    margin: 70px 20px auto 20px;
+    border-radius: 9px;
+    background-color: white;
+    padding: 15px 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.application-table {
+    text-align: center;
+}
+.app-table-btns {
+    display: grid;
+    grid-template: auto auto auto / auto;
+    gap: 5px;
+}
+.app-approve-btn {
+    margin: auto;
+    width: 70px;
+    background-color: green;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 5px;
+    border-width: 0px;
+}
+.app-deny-btn {
+    margin: auto;
+    width: 70px;
+    background-color: red;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 5px;
+    border-width: 0px;
+}
+.app-pending-btn {
+    margin: auto;
+    width: 70px;
+    background-color: gray;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 5px;
+    border-width: 0px;
+}
+.app-approve-btn:hover {
+    cursor: pointer;
+    background-color: darkgreen;
+}
+.app-deny-btn:hover {
+    cursor: pointer;
+    background-color: darkred;
+}
+.app-pending-btn:hover {
+    cursor: pointer;
+    background-color: darkslategray;
+}
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 20px;
+}
+.pending-btn, .approved-btn, .denied-btn {
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    border-style: none;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    border-radius: 10px;
+}
+.approved-btn {
+    background-color: green;
+}
+.approved-btn:hover {
+    cursor: pointer;
+    background-color: darkgreen;
+}
+.denied-btn {
+    background-color: red;
+}
+.denied-btn:hover {
+    cursor: pointer;
+    background-color: darkred;
+}
+.pending-btn {
+    background-color: gray;
+}
+.pending-btn:hover {
+    cursor: pointer;
+    background-color: darkslategray;
+}
+.user-table-container {
+    background-color: white;
+    width: 90%;
+    margin: auto auto auto auto;
+}
+.user-dash-welcome {
+    margin-top: 100px;
+    text-align: center;
+    font-family: cursive;
+    font-size: 3rem;
+    color: darkgreen;
+    padding-bottom: 10px;
+    letter-spacing: -2px;
+}
+.applicant-info-table {
+    background-color: white;
+    width: 70%;
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;   
+    padding: 30px 0px;
+}
+.applicant-table-title {
+    font-size: 2.5rem;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: -2px;
+    font-weight: 500;
+    padding-bottom: 40px;
+}
+.applicant-status-message{
+    margin: 70px auto 20px auto;
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+.status-pending, .status-approved, .status-denied {
+    width: 70%;
+    border-radius: 9px;
+    padding: 20px 0px;
+}
+.status-pending {
+    background-color: gray;
+    color: white;
+  }
+  
+  .status-approved {
+    background-color: green;
+    color: white;
+  }
+  
+  .status-denied {
+    background-color: red;
+    color: white;
+  }
+.user-contact-form-title{
+    padding-top: 20px;
+    text-align: center;
+    font-family: cursive;
+    font-weight: 700;
+    font-size: 3rem;
+    letter-spacing: -2px;
+    color: darkgreen;
+}
+.user-contact-form-desc {
+    color: darkslategray;
+    font-size: 1.3rem;
+    text-align: center;
+}
+.user-logout-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+.user-logout {
+    text-decoration: none;
+    color: white;
+    background-color: green;
+    padding: 10px 20px; 
+    border-radius: 10px;
+    font-size: 1.5rem;
+}
+.user-logout:hover {
+    cursor: pointer;
+    background-color: darkgreen;
+}
+.app-approve-btn, .app-deny-btn, .app-pending-btn, .ann-delete-btn, .ann-modify-btn ,.ann-cancel-btn{
+    transition: background-color 0.3s;
 }

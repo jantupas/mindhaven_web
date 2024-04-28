@@ -7,13 +7,16 @@ function Admdashnav () {
         <div className="adm-dash-nav">
             <ul className="nav-content">
                 <li>
-                    <Link to="../homepage" className="nav-item">Manage Announcements</Link>
+                    <Link to="/announcedash" className="nav-item">Manage Announcements</Link>
                 </li>
                 <li>
-                    <Link to="../homepage" className="nav-item">Manage News</Link>
+                    <Link to="/newsdash" className="nav-item">Manage News</Link>
                 </li>
                 <li>
-                    <Link to="../homepage" className="nav-item">Manage Applications</Link>
+                    <Link to="/applicationdash" className="nav-item">Manage Applications</Link>
+                </li>
+                <li>
+                    <Link to="../homepage" className="nav-item">Log Out</Link>
                 </li>
             </ul>
         </div>

@@ -1,12 +1,9 @@
-import React from "react"
-import "./contactstyles.css"
-import { collection, addDoc } from "firebase/firestore"
-import { db } from "../../../firebase"
-import { useState } from 'react'
+import React, { useState } from "react";
+import "../contact/contactstyles.css";
+import { collection, addDoc } from "firebase/firestore";
+import { db } from "../../../firebase";
 
-
-
-function Newsform () {
+function Newsform() {
   const [title, setTitle] = useState('');
   const [date, setDate] = useState('');
   const [content, setContent] = useState('');
@@ -14,26 +11,33 @@ function Newsform () {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    // Display confirmation message
+    const isConfirmed = window.confirm("Are you sure you want to submit this announcement?");
+    if (!isConfirmed) {
+      return;
+    }
+
     try {
-      const docRef = await addDoc(collection(db, "news"), {
+      const docRef = await addDoc(collection(db, "announcements"), {
         title: title,
         date: new Date(date),
         content: content
       });
 
-      
       setTitle('');
       setDate('');
       setContent('');
+      window.location.reload();
 
     } catch (error) {
       console.error("Error adding document: ", error);
     }
   };
 
-    return (
-        <div>
+  return (
+    <div>
       <form className="add-news-form" onSubmit={handleSubmit}>
+        <h1 className="add-title"> ADD NEW ANNOUNCEMENT</h1>
         <label className="news-form-label">Title</label>
         <input 
           type="text"
@@ -60,11 +64,11 @@ function Newsform () {
           onChange={(e) => setContent(e.target.value)}
         />
         <div className="btn-container">
-            <button className ="submit-btn" type="submit">Submit</button>
+          <button className ="submit-btn" type="submit">Submit</button>
         </div>
       </form>
     </div>
-    )
+  );
 }
 
-export default Newsform
+export default Newsform;

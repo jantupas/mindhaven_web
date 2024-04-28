@@ -8,7 +8,7 @@ function Log () {
             <div className="log-content">
                 <div className="desc-log">
                     <h2>Track your Application</h2>
-                    <Link to="/admin" className="log-link">Click Here to Login as User</Link>
+                    <Link to="/user" className="log-link">Click Here to Login as User</Link>
                 </div>
                 <div className="desc-log">
                     <h2>Review Application</h2>

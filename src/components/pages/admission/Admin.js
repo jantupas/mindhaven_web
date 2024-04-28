@@ -11,7 +11,7 @@ function Admin() {
   const handleLogin = (e) => {
     e.preventDefault();
     if (username === "admin" && password === "admin") {
-      navigate('/admdash');
+      navigate('/announcedash');
     } else {
       setErrorMessage("Incorrect username or password.");
     }

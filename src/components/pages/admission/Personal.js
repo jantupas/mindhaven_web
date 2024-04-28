@@ -28,8 +28,17 @@ function Personal () {
         }
     }, [submissionMessage]);
 
+    const generateRandomNumber = () => {
+        return Math.floor(1000000000 + Math.random() * 9000000000);
+    };
+
     const handlePerSubmit = async (e) => {
         e.preventDefault();
+
+        const isConfirmed = window.confirm("Are you sure you want to submit this application?");
+        if (!isConfirmed) {
+            return;
+        }
     
         try {
           const docRef = await addDoc(collection(db, "applicant_information"), {
@@ -41,7 +50,9 @@ function Personal () {
             nationality: nationality,
             email: email,
             username: username,
-            number: number
+            number: number,
+            status: "pending",
+            studentno: generateRandomNumber()
           });
           
           setSubmissionMessage('We have received your submission. Thank you!');
@@ -165,7 +176,7 @@ function Personal () {
                         />
                     </div>
                     <div className="per-form-con">
-                        <label className="personal-label">*Mobile Number </label>
+                        <label className="personal-label">*Mobile Number</label>
                         <input 
                             type="tel"
                             className="personal-form-in"

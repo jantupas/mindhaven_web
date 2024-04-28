@@ -3,10 +3,10 @@ import { db } from "../../../firebase";
 import { getDocs, collection, doc, updateDoc, deleteDoc } from "firebase/firestore"
 import { Link } from "react-router-dom"
 import "./dashboardstyles.css"
-import Newsform from "./Newsform"
+import Newsevent from "./Newsevent"
 import Admdashnav from "./Admdashnav"
 
-function Announcedash() {
+function Newsdash() {
   const [announcementData, setAnnouncementData] = useState([]);
   const [editMode, setEditMode] = useState(false);
   const [currentAnnouncement, setCurrentAnnouncement] = useState({
@@ -21,7 +21,7 @@ function Announcedash() {
   }, []);
 
   async function fetchDataFromFirestore() {
-    const querySnapshot = await getDocs(collection(db, "announcements"));
+    const querySnapshot = await getDocs(collection(db, "news"));
     const data = querySnapshot.docs.map((doc) => ({
       id: doc.id,
       ...doc.data(),
@@ -58,13 +58,13 @@ function Announcedash() {
   async function handleSubmit(event) {
     event.preventDefault();
 
-    const isConfirmed = window.confirm("Are you sure you want to submit this announcement?");
+    const isConfirmed = window.confirm("Are you sure you want to submit this?");
     if (!isConfirmed) {
       return;
     }
-
+    
     const { id, title, date, content } = currentAnnouncement;
-    const announcementRef = doc(db, "announcements", id);
+    const announcementRef = doc(db, "news", id);
     await updateDoc(announcementRef, {
       title,
       date,
@@ -75,18 +75,18 @@ function Announcedash() {
   }
 
   async function handleDelete(announcementId) {
-    if (window.confirm("Are you sure you want to delete this announcement?")) {
-      await deleteDoc(doc(db, "announcements", announcementId));
+    if (window.confirm("Are you sure you want to delete this?")) {
+      await deleteDoc(doc(db, "news", announcementId));
       fetchDataFromFirestore();
     }
   }
 
   return (
     <div className="whole-contact-container">
-      <div className="contact-background">
+    <div className="contact-background">
       <Admdashnav />
       <div className="admdash-ann-cont">
-        <h1 className="ann-dash-title">MANAGE ANNOUNCEMENTS</h1>
+        <h1 className="ann-dash-title">MANAGE NEWS AND EVENTS</h1>
         <table className="announcement-table">
           <thead>
             <tr>
@@ -172,11 +172,11 @@ function Announcedash() {
         )}
       </div>
       <div className="add-container">
-        <Newsform />
-      </div>
+        <Newsevent />
+    </div>
     </div>
     </div>
   );
 }
 
-export default Announcedash;
+export default Newsdash;

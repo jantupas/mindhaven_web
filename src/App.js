@@ -11,7 +11,11 @@ import About from "./components/pages/about/About"
 import Foot from "./components/footer/Foot"
 import Admission from "./components/pages/admission/Admission"
 import Admin from "./components/pages/admission/Admin"
-import Admdash from "./components/pages/admission/Admdash"
+import Announcedash from "./components/pages/admission/Announcedash"
+import Newsdash from "./components/pages/admission/Newsdash"
+import Applicationdash from "./components/pages/admission/Applicationdash"
+import User from "./components/pages/admission/User"
+import Userdash from "./components/pages/admission/Userdash"
 
 import './App.css';
 
@@ -39,7 +43,12 @@ function App() {
                         <Route path="/about" element={<About />} />
                         <Route path ="/admission" element={<Admission />} />
                         <Route path ="/admin" element={<Admin />} />
-                        <Route path ="/admdash" element={<Admdash />} />
+                        <Route path ="/announcedash" element={<Announcedash />} />
+                        <Route path ="/newsdash" element={<Newsdash />} />
+                        <Route path ="/applicationdash" element={<Applicationdash />} />
+                        <Route path ="/user" element={<User />} />
+                        <Route path="/userdash" element={<Userdash />} />
+
                     </Route>
                 </Routes>
                 <Foot />

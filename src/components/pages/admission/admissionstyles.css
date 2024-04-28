@@ -114,6 +114,7 @@ body {
     font-weight: 600;
     border-radius: 9px;
     border-width: 0px;
+    transition: background-color 0.3s;
 }
 .per-submit-btn:hover {
     cursor: pointer;
@@ -242,6 +243,7 @@ body {
     font-weight: 600;
     border-radius: 9px;
     border-width: 0px;
+    transition: background-color 0.3s;
 }
 .admin-log-sbmt:hover {
     cursor: pointer;
