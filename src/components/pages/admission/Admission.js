@@ -19,7 +19,7 @@ function Admission () {
                     <img src={capimg3} alt="mindhaven-students" className="ad-img"/>
                 </div>
                 <div className="adm-title">
-                    <h1>Apply Now and Join us at MindHaven School Inc</h1>
+                    <h1>Come and Join us at MindHaven School Inc</h1>
                     <p>A Place to Learn, Laugh, and Love</p>
                 </div>
                 <div className="adm-form">

@@ -8,15 +8,20 @@ function Vismis () {
         <div className="background-container">
             <h1>Vision & Mission</h1>
             <p>
-                We are a CATHOLIC, BENEDICTINE, FILIPINO educational institution that envisions 
-                the formation of Christ-centered, socially-oriented Scholasticans with reverence for
-                God, for persons and all creation, imbued with Christian-Benedictine values and living 
-                out our ORA ET LABORA.
+                Insert Vision Here. The following is filler text: 
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
             <p>
-                Inspired by this vision, we commit ourselves to provide a HOLISTIC formation anchored on 
-                ACADEMIC EXCELLENCE to form students into SOCIALLY RESPONSIBLE AGENTS OF CHANGE in the 
-                transformation of a just and equitable society.
+                Insert Mission Here. The following is filler text: 
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
         </div>
     )
