@@ -74,7 +74,8 @@ function Personal () {
 
     return (
         <div className="personal-form-container">
-            <h1 className="per-form-title">PERSONAL INFORMATION</h1>
+            <h1 className="per-form-title">Personal Information</h1>
+            <p className="dept-desc">Fill up the form to apply.</p>
             <form className="personal-form" onSubmit={handlePerSubmit}>
                 <div className="per-form-content">
                     <div className="per-form-con">

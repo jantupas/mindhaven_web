@@ -22,9 +22,17 @@ body {
     font-family: cursive;
 }
 .ann-page-title > h1{
-    font-size: 3rem;
+    font-weight: 800;
+    font-size: 3.5rem;
     color: darkgreen;
-    letter-spacing: -2px;
+    letter-spacing: -1px;
+    padding-bottom: 5px;
+    text-shadow: 
+        2px 2px 0 yellow,  
+        -2px -2px 0 yellow,
+         2px -2px 0 yellow,
+        -2px  2px 0 yellow;
+    font-family: cursive;
 }
 .ann-page-title > p {
     color: darkslategray;
@@ -56,14 +64,22 @@ body {
     text-align: justify;
 }
 .ann-page-news {
-    padding-top: 70px;
+    padding-top: 30px;
     text-align: center;
     font-family: cursive;
 }
 .ann-page-news > h1{
-    font-size: 3rem;
+    font-weight: 800;
+    font-size: 3.5rem;
     color: darkgreen;
-    letter-spacing: -2px;
+    letter-spacing: -1px;
+    padding-bottom: 5px;
+    text-shadow: 
+        2px 2px 0 yellow,  
+        -2px -2px 0 yellow,
+         2px -2px 0 yellow,
+        -2px  2px 0 yellow;
+    font-family: cursive;
 }
 .ann-page-news > p {
     color: darkslategray;

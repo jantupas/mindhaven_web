@@ -16,6 +16,7 @@ import Newsdash from "./components/pages/admission/Newsdash"
 import Applicationdash from "./components/pages/admission/Applicationdash"
 import User from "./components/pages/admission/User"
 import Userdash from "./components/pages/admission/Userdash"
+import Gallery from "./components/pages/gallery/Gallery"
 
 import './App.css';
 
@@ -48,6 +49,7 @@ function App() {
                         <Route path ="/applicationdash" element={<Applicationdash />} />
                         <Route path ="/user" element={<User />} />
                         <Route path="/userdash" element={<Userdash />} />
+                        <Route path="/gallery" element={<Gallery />} />
 
                     </Route>
                 </Routes>

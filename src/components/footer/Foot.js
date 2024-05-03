@@ -34,7 +34,7 @@ function Foot () {
                             <Link to="./about" className="footer-item">Faculty and Staff</Link>
                         </li>
                         <li>
-                            <Link to="./about" className="footer-item">School Policies</Link>
+                            <Link to="./about" className="footer-item">Admission Policies</Link>
                         </li>
                     </ul>
                 </div>  

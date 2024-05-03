@@ -34,11 +34,16 @@ body {
     font-family: cursive;
 }
 .home-title > h1 {
-    font-weight: 700;
-    font-size: 3rem;
+    font-weight: 800;
+    font-size: 3.5rem;
     color: darkgreen;
     letter-spacing: -1px;
     padding-bottom: 5px;
+    text-shadow: 
+        2px 2px 0 yellow,  
+        -2px -2px 0 yellow,
+         2px -2px 0 yellow,
+        -2px  2px 0 yellow;
 }
 .home-title > p{
     color: darkslategray;
@@ -89,9 +94,6 @@ body {
     text-decoration: none;
     color: yellow;
     background-color: green;
-}
-.home-anns {
-    padding-bottom: 30px;
 }
 .news-container {
     max-width: 400px;
@@ -144,7 +146,7 @@ body {
     margin: 0 auto;
     position: relative;
     width: 80%;
-    height: 70vh;
+    height: 80vh;
     overflow: hidden;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;

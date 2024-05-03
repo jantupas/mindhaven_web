@@ -23,10 +23,17 @@ body {
     font-family: cursive;
 }
 .contact-title > h1 {
-    font-weight: 700;
-    font-size: 3rem;
-    letter-spacing: -2px;
+    font-weight: 800;
+    font-size: 3.5rem;
     color: darkgreen;
+    letter-spacing: -1px;
+    padding-bottom: 5px;
+    text-shadow: 
+        2px 2px 0 yellow,  
+        -2px -2px 0 yellow,
+         2px -2px 0 yellow,
+        -2px  2px 0 yellow;
+    font-family: cursive;
 }
 .contact-title > p {
     color: darkslategray;
@@ -117,15 +124,22 @@ body {
 }
 .next-title{
     padding-top: 100px;
-    padding-bottom: 1   0px;
+    padding-bottom: 1  0px;
     text-align: center;
     font-family: cursive;
 }
 .next-title > h1 {
-    font-weight: 700;
-    font-size: 3rem;
-    letter-spacing: -2px;
+    font-weight: 800;
+    font-size: 3.5rem;
     color: darkgreen;
+    letter-spacing: -1px;
+    padding-bottom: 5px;
+    text-shadow: 
+        2px 2px 0 yellow,  
+        -2px -2px 0 yellow,
+         2px -2px 0 yellow,
+        -2px  2px 0 yellow;
+    font-family: cursive;
 }
 .next-title > p {
     color: darkslategray;

@@ -19,27 +19,35 @@ body {
 }
 .ad-image {
     padding-top: 70px;
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template: auto/ 1fr 1fr;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     max-width: 100%;
     overflow: hidden;
+    
 }
 .ad-img {
     width: 100%;
     height: 70vh;
+    object-fit: cover;
 }
 .adm-title {
-    padding-top: 30px;
+    padding-top: 20px;
     text-align: center;
     font-family: cursive;
 }
 .adm-title > h1 {
-    font-weight: 700;
-    font-size: 3rem;
+    font-weight: 800;
+    font-size: 3.5rem;
     color: darkgreen;
-    letter-spacing: -2px;
+    letter-spacing: -1px;
     padding-bottom: 5px;
+    text-shadow: 
+        2px 2px 0 yellow,  
+        -2px -2px 0 yellow,
+         2px -2px 0 yellow,
+        -2px  2px 0 yellow;
+    font-family: cursive;
 }
 .adm-title > p{
     color: darkslategray;
@@ -59,7 +67,7 @@ body {
     font-weight: 500;
     letter-spacing: -2px;
     text-align: center;
-    padding-bottom: 40px;
+    padding-bottom: 10px;
 }
 .per-form-con {
     display: flex;
@@ -288,4 +296,61 @@ body {
 
 .error-modal button:hover {
   background-color: #ff4d4d;
+}
+.dept-title {
+    text-align: center;
+    color: darkgreen;
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: -2px;
+    padding-bottom: 10px;
+}
+.dept-desc {
+    text-align: center;
+    color: darkslategray;
+    font-size: 1.2rem;
+}
+.department-main {
+    background-color: white;
+    max-width: 85%;
+    margin: 0 auto;
+    border-radius: 9px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+.department-cont {
+    display: grid;
+    grid-template: auto / auto auto;
+    justify-content: center;
+    gap: 0px 200px;
+}
+.dept-item-title {
+    color: darkgreen;
+    font-weight: 600;
+    letter-spacing: -1px;
+}
+.dept-list {
+    color: darkslategray;
+    padding: 10px 0px 20px 50px;
+    font-size: 1.2rem;
+}
+.pol-title {
+    color: darkgreen;
+    font-size: 2rem;
+    color: darkgreen;
+    font-weight: 500;
+    letter-spacing: -2px;
+    padding-bottom: 20px;
+}
+.pol-desc {
+    color: darkslategray;
+    font-size: 1.2rem;
+}
+.adm-pol {
+    max-width: 85%;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 9px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px 80px;
 }

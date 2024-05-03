@@ -1,11 +1,10 @@
 import React from "react"
-import { Link } from "react-router-dom"
-import imgexp from "./imgexp.jpg"
-import imgexp2 from "./imgexp2.jpg"
-import imgplay from "./imgplay.jpg"
-import imgplay2 from "./imgplay2.jpg"
-import imgprog from "./imgprog.jpg"
-import imgprog2 from "./imgprog2.jpg"
+import imgexp1 from "../../images/about/imgexp1.jpg"
+import imgexp2 from "../../images/about/imgexp2.jpg"
+import imgplay from "../../images/about/imgplay.jpg"
+import imgplay2 from "../../images/about/imgplay2.jpg"
+import imgprog from "../../images/about/imgprog.jpg"
+import imgprog2 from "../../images/about/imgprog2.jpg"
 
 import "./aboutstyles.css"
 
@@ -21,14 +20,14 @@ function Background() {
                 MindHaven has received recognition from SENIA, UNESCO, and IFIP.
             </p>
             <div className="exp-img-container">
-                <img src={imgexp} alt="experience photo" className="imgexp"/>
-                <img src={imgexp2} alt="experience photo 2" className="imgexp"/>
+                <img src={imgexp2} alt="experience photo" className="imgexp"/>
+                <img src={imgexp1} alt="experience photo 2" className="imgexp"/>
             </div>
             <br />
             <br />
-            <h1>Non-traditional Play-based Approach</h1>
+            <h1>Progressive, Play-based, and Brain-based School</h1>
             <p>
-                MindHaven adopts a play-based and non-traditional approach to education. 
+                MindHaven adopts a progressive, play-based, and brain-based approach to education. 
                 This means that instead of relying solely on traditional teaching methods and 
                 standardized curricula, we emphasize learning through play. 
                 This approach recognizes that children learn best when they are engaged, curious, 
@@ -43,9 +42,9 @@ function Background() {
             </div>
             <br />
             <br />
-            <h1>Personalized Programs</h1>
+            <h1>Whole Child, Whole School, Whole Community Inclusive Program</h1>
             <p>
-            One of the standout features of MindHaven is our commitment to personalized education. 
+            One of the standout features of MindHaven is our commitment to inclusive and personalized education. 
             Rather than offering a standardized, one-size-fits-all school program, we tailor our educational programs 
             to meet the unique needs and abilities of each child. This personalized approach ensures that each 
             student receives an education that is tailored to their individual strengths, interests, and 

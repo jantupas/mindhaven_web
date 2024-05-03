@@ -30,6 +30,9 @@ function Nav () {
                     <li>
                         <Link to="./contact" className="page">Contact Us</Link>
                     </li>
+                    <li>
+                        <Link to="./gallery" className="page">Gallery</Link>
+                    </li>
                 </ul>
             </div>
         </nav>
