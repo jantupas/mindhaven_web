@@ -206,7 +206,7 @@ body {
 
 .admin-log-container {
     background-color: white;
-    width: 90%;
+    width: 50%;
     margin: 300px auto 300px auto;
     border-radius: 9px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -487,7 +487,7 @@ body {
 
         }
     }
-@media (max-width: 750px) {
+@media (max-width: 1155px) {
     .admin-login-form-cont {
         grid-template: auto / auto;
     }

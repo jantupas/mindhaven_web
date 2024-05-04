@@ -100,7 +100,7 @@ body {
     text-align: center;
 }
 .adm-ann-in {
-    width: 800px;
+    width: 80%;
     margin: 0 auto;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1rem;
@@ -247,7 +247,7 @@ body {
     margin-bottom: 20px;
 }
 .pending-btn, .approved-btn, .denied-btn {
-    font-size: 1.5rem;
+    font-size: 1rem;
     padding: 10px 20px;
     border-style: none;
     color: white;
@@ -411,7 +411,20 @@ body {
     .user-dash-welcome {
         font-size: 2rem;
     }
-
+    .filter-buttons {
+        flex-direction: column;
+    }
+    .announcement-table {
+        overflow-x: auto;
+        display: block;
+        white-space: nowrap;
+      }
+      .ann-table-content {
+        min-width: 100px; 
+        max-width: 200px; 
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
 }
 @media (max-width: 851px) {
     .user-dash-welcome {
@@ -470,4 +483,10 @@ body {
     .applicant-status-message {
         font-size: 1rem;
     }
+      .ann-table-btns {
+        min-width: 150px; 
+      }
+      .nav-item {
+        font-size: 0.7rem;
+      }
 }
