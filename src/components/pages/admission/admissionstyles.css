@@ -429,7 +429,10 @@ body {
     .log-link {
         font-size: 1rem;
     }
+    .admin-log-container {
+        width: 70%;
     }
+}
     @media (max-width: 530px) {
         .per-form-content {
             grid-template-columns: 1fr; 
@@ -484,7 +487,9 @@ body {
         }
         .ad-img {
             height: 50vh;
-
+        }
+        .admin-log-container {
+            width: 90%;
         }
     }
 @media (max-width: 1155px) {
