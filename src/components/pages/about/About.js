@@ -3,6 +3,7 @@ import React from "react"
 import Vismis from "./Vismis"
 import Background from "./Background"
 import Faculty from "./Faculty"
+import History from "./History"
 import "./aboutstyles.css"
 
 import abtimg1 from "../../images/about/abtimg1.jpg"
@@ -28,6 +29,11 @@ function About () {
                 <br />
                 <br />
                 <Faculty id="faculty"/>
+                <br />
+                <br />
+                <History id="history" />
+                <br />
+                <br />
             </div>
         </div>
     )

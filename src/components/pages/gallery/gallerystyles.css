@@ -80,3 +80,16 @@ body {
     font-size: 30px;
     cursor: pointer;
   }
+
+@media screen and (max-width: 1070px) {
+    .gallery-cont {
+      grid-template-columns: auto auto;
+    }
+  }
+  
+  @media screen and (max-width: 560px) {
+    .gallery-cont {
+      grid-template-columns: auto;
+    }
+  }
+  

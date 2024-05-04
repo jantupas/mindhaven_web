@@ -1,20 +1,21 @@
-import React, { useState, useEffect } from 'react'
-import "./homepage.css"
+import React, { useState, useEffect } from 'react';
+import './homepage.css';
 
 const Carousel = ({ images }) => {
-    const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  
-    useEffect(() => {
-      const intervalId = setInterval(() => {
-        setCurrentImageIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
-      }, 5000); 
-  
-      return () => {
-        clearInterval(intervalId); 
-      };
-    }, [images.length]);
-  
-    return (
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
+    }, 5000);
+
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, [images.length]);
+
+  return (
+    <div className="carousel-container">
       <div className="carousel">
         {images.map((image, index) => (
           <img
@@ -25,7 +26,8 @@ const Carousel = ({ images }) => {
           />
         ))}
       </div>
-    );
-  };
-  
-  export default Carousel;
+    </div>
+  );
+};
+
+export default Carousel;

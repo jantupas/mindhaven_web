@@ -97,7 +97,10 @@ function Newsdash() {
             </tr>
           </thead>
           <tbody>
-            {announcementData.map((announcement) => (
+            {announcementData
+              .slice()
+              .sort((a, b) => b.date - a.date)
+              .map((announcement) => (
               <tr key={announcement.id}>
                 <td className="ann-table-content">{announcement.title}</td>
                 <td className="ann-table-content">
