@@ -14,7 +14,6 @@ body {
     display: flex;
     justify-content: center;
     list-style-type: none;
-    
 }
 .nav-item{
     margin: 0px 30px;
@@ -185,7 +184,8 @@ body {
     padding: 10px 30px;
 }
 .app-dash-cont {
-    margin: 70px 20px auto 20px;
+    width: 95%;
+    margin: 50px auto 0px auto;
     border-radius: 9px;
     background-color: white;
     padding: 15px 20px;
@@ -193,6 +193,8 @@ body {
 }
 .application-table {
     text-align: center;
+    width: 100%;
+    overflow-x: auto;
 }
 .app-table-btns {
     display: grid;
@@ -288,6 +290,11 @@ body {
     color: darkgreen;
     padding-bottom: 10px;
     letter-spacing: -2px;
+    text-shadow: 
+        1px 1px 0 yellow,  
+        -1px -1px 0 yellow,
+         1px -1px 0 yellow,
+        -1px  1px 0 yellow;
 }
 .applicant-info-table {
     background-color: white;
@@ -339,6 +346,11 @@ body {
     font-size: 3rem;
     letter-spacing: -2px;
     color: darkgreen;
+    text-shadow: 
+        1px 1px 0 yellow,  
+        -1px -1px 0 yellow,
+         1px -1px 0 yellow,
+        -1px  1px 0 yellow;
 }
 .user-contact-form-desc {
     color: darkslategray;
@@ -364,4 +376,98 @@ body {
 }
 .app-approve-btn, .app-deny-btn, .app-pending-btn, .ann-delete-btn, .ann-modify-btn ,.ann-cancel-btn{
     transition: background-color 0.3s;
+}
+.table-container {
+    overflow-x: auto; 
+    max-width: 95%; 
+    margin: 0 auto;
+  }
+  
+@media (max-width: 1000px) {
+    .nav-content {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 10px;  
+    }
+}
+@media (max-width: 580px) {
+    .nav-item {
+        font-size: 1.2rem;
+    }
+}
+@media (max-width: 768px) {
+    .ann-dash-title {
+        font-size: 2rem;
+    }
+    .ann-table-title {
+        font-size: 1rem;
+    }
+    .ann-table-content {
+        font-size: 0.9rem;
+    }
+    .add-title {
+        font-size: 2rem;
+    }
+    .user-dash-welcome {
+        font-size: 2rem;
+    }
+
+}
+@media (max-width: 851px) {
+    .user-dash-welcome {
+        font-size: 2rem;
+    }
+    .user-contact-form-title {
+        font-size: 2rem;
+    }
+    .user-contact-form-desc {
+        font-size: 1.2rem;
+    }
+    .applicant-table-title {
+        font-size: 2rem;
+    }
+    .app-table-title {
+        font-size: 1rem;
+    }
+    .app-table-content {
+        font-size: 0.9rem;
+    }
+    .applicant-status-message {
+        font-size: 1.5rem;
+    }
+}
+@media (max-width: 480px) {
+    .ann-dash-title {
+        font-size: 1.8rem;
+    }
+    .ann-table-title {
+        font-size: 0.9rem;
+    }
+    .ann-table-content {
+        font-size: 0.8rem;
+    }
+    .add-title {
+        font-size: 1.8rem;
+    }
+    .user-dash-welcome {
+        font-size: 1.5rem;
+    }
+    .user-contact-form-title {
+        font-size: 1.5rem;
+    }
+    .user-contact-form-desc {
+        font-size: 1rem;
+    }
+    .applicant-table-title {
+        font-size: 1.5rem;
+    }
+    .app-table-title {
+        font-size: 0.9rem;
+    }
+    .app-table-content {
+        font-size: 0.8rem;
+    }
+    .applicant-status-message {
+        font-size: 1rem;
+    }
 }

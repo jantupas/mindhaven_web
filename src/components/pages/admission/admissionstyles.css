@@ -24,7 +24,6 @@ body {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     max-width: 100%;
     overflow: hidden;
-    
 }
 .ad-img {
     width: 100%;
@@ -55,7 +54,7 @@ body {
 }
 .personal-form-container {
     background-color: white;
-    margin: 50px 100px;
+    margin: 50px 8%;
     padding-top: 50px;
     padding-bottom: 50px;
     border-radius: 9px;
@@ -76,7 +75,7 @@ body {
 .per-form-content {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr; 
-    padding: 20px 100px 20px 100px;
+    padding: 20px 70px 20px 70px;
     gap: 50px;
 }
 .personal-form-in {
@@ -173,7 +172,7 @@ body {
 }
 .log-container {
     background-color: white;
-    width: 1000px;
+    width: 80%;
     margin: auto;
     padding: 50px 20px 50px 20px;
     border-radius: 9px;
@@ -207,7 +206,7 @@ body {
 
 .admin-log-container {
     background-color: white;
-    max-width: 700px;
+    width: 90%;
     margin: 300px auto 300px auto;
     border-radius: 9px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -353,4 +352,157 @@ body {
     border-radius: 9px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 30px 80px;
+}
+@media (max-width: 1200px) {
+    .ad-image {
+        grid-template-columns: 1fr;
+    }
+    .ad-img:first-child {
+        display: block;
+    }
+
+    .ad-img:last-child {
+        display: none;
+    }
+}
+@media (max-width: 595px) {
+    .ad-img {
+        object-fit: fill;
+    }
+}
+@media (max-width: 1080px) {
+    .department-cont {
+        grid-template: auto / auto;
+    }
+    .per-form-content {
+        grid-template-columns: 1fr 1fr; 
+        padding: 0px 40px;
+    }
+    .log-content {
+        grid-template: auto / 1fr;   
+        gap: 10px;
+    }
+}
+@media (max-width: 768px) {
+    .adm-title > h1 {
+        font-size: 2rem;
+    }
+    .adm-title > p {
+        font-size: 1rem;
+    }
+    .per-form-content {
+        grid-template-columns: 1fr; 
+        gap: 20px 0px;
+    }
+    .dept-title {
+        font-size: 1.8rem;
+    }
+    .dept-desc {
+        font-size: 1rem;
+    }
+    .dept-item-title {
+        font-size: 1.3rem;
+    }
+    .dept-list {
+        font-size: 0.9rem;
+    }
+    .pol-title {
+        font-size: 1.3rem;
+        letter-spacing: -1px;
+    }
+    .pol-desc {
+        font-size: 0.9rem;
+    }
+    .per-form-title {
+        font-size: 2rem;
+    }
+    .personal-label {
+        font-size: 1rem;
+    }
+    .personal-form-in {
+        font-size: 0.9rem;
+    }
+    .desc-log > h2 {
+        font-size: 2rem;
+        padding-bottom: 0px;    
+    }
+    .log-link {
+        font-size: 1rem;
+    }
+    }
+    @media (max-width: 530px) {
+        .per-form-content {
+            grid-template-columns: 1fr; 
+            gap: 20px 0px;
+        }
+    }
+    @media (max-width: 480px) {
+        .adm-title > h1 {
+            font-size: 1.5rem;
+        }
+        .adm-title > p {
+            font-size: 0.7rem;
+        }
+        .dept-title {
+            font-size: 1.5rem;
+        }
+        .dept-desc {
+            font-size: 0.9rem;
+        }
+        .dept-item-title {
+            font-size: 1rem;
+        }
+        .dept-list {
+            font-size: 0.8rem;
+        }
+        .pol-title {
+            font-size: 1.1rem;
+            letter-spacing: -1px;
+        }
+        .pol-desc {
+            font-size: 0.8rem;
+        }
+        .per-form-title {
+            font-size: 1.5rem;
+        }
+        .personal-label {
+            font-size: 0.8rem;
+        }
+        .personal-form-in {
+            font-size: 0.8rem;
+        }
+        .per-form-content{
+            padding: 0px 20px;
+        
+        }
+        .desc-log > h2 {
+            font-size: 1.5rem;
+            padding-bottom: 0px;  
+        }
+        .log-link {
+            font-size: 0.8rem;  
+        }
+        .ad-img {
+            height: 50vh;
+
+        }
+    }
+@media (max-width: 750px) {
+    .admin-login-form-cont {
+        grid-template: auto / auto;
+    }
+    .admin-log-title {
+        font-size: 2rem;
+    }
+    .admin-form-label {
+        font-size: 1rem;
+    }
+}
+@media (max-width: 600px) {
+    .admin-log-title {
+        font-size: 1.5rem;
+    }
+    .admin-form-label {
+        font-size: 0.9rem;
+    }
 }

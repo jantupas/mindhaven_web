@@ -258,5 +258,9 @@ body {
     .read-more {
         font-size: 0.9rem;
     }
+    .welcome-image {
+        height: 50vh;
+        object-fit: fill;
+    }
   }
   

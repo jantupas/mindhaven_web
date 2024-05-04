@@ -16,8 +16,8 @@ function Admission () {
         <div className="whole-admission-container">
             <div className="admission-background">
                 <div className="ad-image">
-                    <img src={admimg1} alt="mindhaven-students" className="ad-img"/>
                     <img src={admimg2} alt="mindhaven-students" className="ad-img"/>
+                    <img src={admimg1} alt="mindhaven-students" className="ad-img"/>
                 </div>
                 <div className="adm-title">
                     <h1>Join us at MindHaven School Inc</h1>

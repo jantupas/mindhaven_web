@@ -74,6 +74,7 @@ function Applicationdash() {
             <button className="approved-btn" onClick={() => setFilter("approved")}>Approved</button>
           <button className="denied-btn" onClick={() => setFilter("denied")}>Denied</button>
         </div>
+        <div className="table-container">
         <table className="application-table">
           <thead>
             <tr>
@@ -131,6 +132,7 @@ function Applicationdash() {
             ))}
           </tbody>
         </table>
+        </div>
       </div>
     </div>
     </div>

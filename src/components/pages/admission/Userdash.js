@@ -57,6 +57,7 @@ function UserDash() {
         {applicantInfo && (
             <div className="applicant-info-table">
             <h2 className="applicant-table-title">Applicant Information</h2>
+            <div className="table-container">
             <table className="application-table">
                 <thead>
                 <tr>
@@ -69,11 +70,11 @@ function UserDash() {
                 </thead>
                 <tbody>
                 <tr>
-                    <td>{applicantInfo.firstname}</td>
-                    <td>{applicantInfo.middlename}</td>
-                    <td>{applicantInfo.lastname}</td>
-                    <td>{new Date(applicantInfo.dateofbirth.seconds * 1000).toLocaleDateString()}</td>
-                    <td>{applicantInfo.gender}</td>
+                    <td className="app-table-content">{applicantInfo.firstname}</td>
+                    <td className="app-table-content">{applicantInfo.middlename}</td>
+                    <td className="app-table-content">{applicantInfo.lastname}</td>
+                    <td className="app-table-content">{new Date(applicantInfo.dateofbirth.seconds * 1000).toLocaleDateString()}</td>
+                    <td className="app-table-content">{applicantInfo.gender}</td>
                 </tr>
                 <tr>
                     <th className="app-table-title">Nationality</th>
@@ -83,14 +84,15 @@ function UserDash() {
                     <th className="app-table-title">Student Number</th>
                 </tr>
                 <tr>
-                    <td>{applicantInfo.nationality}</td>
-                    <td>{applicantInfo.email}</td>
-                    <td>{applicantInfo.username}</td>
-                    <td>{applicantInfo.number}</td>
-                    <td>{applicantInfo.studentno}</td>
+                    <td className="app-table-content">{applicantInfo.nationality}</td>
+                    <td className="app-table-content">{applicantInfo.email}</td>
+                    <td className="app-table-content">{applicantInfo.username}</td>
+                    <td className="app-table-content">{applicantInfo.number}</td>
+                    <td className="app-table-content">{applicantInfo.studentno}</td>
                 </tr>
                 </tbody>
             </table>
+            </div>
                 <h2 className={`applicant-status-message ${getStatusColor(applicantInfo.status)}`}>
                 Your Application Status is {applicantInfo.status && applicantInfo.status.toUpperCase()}
                 </h2>

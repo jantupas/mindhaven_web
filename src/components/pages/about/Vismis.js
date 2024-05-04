@@ -8,10 +8,10 @@ function Vismis () {
         <div className="background-container">
             <h1>Vision</h1>
             <p>
-                We envision the development of a child, <br />
-                WHO is physically, emotionally, intellectually, socially, mentally, and  spiritually well-balanced. <br />
-                WHO is capable of choices and responsible for his conduct. <br />
-                WHERE education would help him discover a field where his talents best suit him. <br />
+                We envision the development of a child, <br /><br />
+                WHO is physically, emotionally, intellectually, socially, mentally, and  spiritually well-balanced. <br /><br />
+                WHO is capable of choices and responsible for his conduct. <br /><br />
+                WHERE education would help him discover a field where his talents best suit him. <br /><br />
                 WHERE he will be satisfied and competent so that he will become a responsible and productive member of the society.
             </p>
             <h1>Mission</h1>
