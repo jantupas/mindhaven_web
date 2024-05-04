@@ -31,6 +31,38 @@ function Personal () {
     const generateRandomNumber = () => {
         return Math.floor(1000000000 + Math.random() * 9000000000);
     };
+    const sendSMS = async () => {
+        const myHeaders = new Headers();
+        myHeaders.append("Authorization", "App 052fd6070330ce93dfd7ebf7dc348f2c-19f3d2e8-ff84-4491-a845-2090788b3830");
+        myHeaders.append("Content-Type", "application/json");
+        myHeaders.append("Accept", "application/json");
+
+        const message = "Thank you for your interest in joining us at MindHaven School Inc. We have successfully received your application. We will be in contact with you soon regarding your application via email. Thank you and have a good day.";
+        const formattedNumber = number.startsWith("63") ? number : `63${number}`;
+
+        const raw = JSON.stringify({
+            "messages": [
+                {
+                    "destinations": [{"to": formattedNumber}],
+                    "from": "MindHaven School Inc.",
+                    "text": message
+                }
+            ]
+        });
+
+        const requestOptions = {
+            method: "POST",
+            headers: myHeaders,
+            body: raw,
+            redirect: "follow"
+        };
+
+        try {
+            await fetch("https://rgz3xy.api.infobip.com/sms/2/text/advanced", requestOptions);
+        } catch (error) {
+            console.error("Error sending SMS: ", error);
+        }
+    };
 
     const handlePerSubmit = async (e) => {
         e.preventDefault();
@@ -54,6 +86,8 @@ function Personal () {
             status: "pending",
             studentno: generateRandomNumber()
           });
+
+          await sendSMS(); // Send SMS notification after successfully adding applicant information to the database
           
           setSubmissionMessage('We have received your submission. Thank you!');
           setFirstName('');

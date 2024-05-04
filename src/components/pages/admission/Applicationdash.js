@@ -20,7 +20,6 @@ function Applicationdash() {
     }));
     setApplicationData(data);
   }
-
   async function handleApproveClick(applicationId) {
     const isConfirmed = window.confirm("Are you sure you want to approve this application?");
     if (!isConfirmed) {
@@ -28,6 +27,12 @@ function Applicationdash() {
     }
     try {
       await updateApplicationStatus(applicationId, "approved");
+      // Call sendSMS function here
+      const application = applicationData.find(app => app.id === applicationId);
+      if (application) {
+        const number = application.number;
+        await sendSMSApprove(number);
+      }
     } catch (error) {
       console.error("Error updating document: ", error);
     }
@@ -40,6 +45,12 @@ function Applicationdash() {
     }
     try {
       await updateApplicationStatus(applicationId, "denied");
+      // Call sendSMS function here
+      const application = applicationData.find(app => app.id === applicationId);
+      if (application) {
+        const number = application.number;
+        await sendSMSDeny(number);
+      }
     } catch (error) {
       console.error("Error updating document: ", error);
     }
@@ -52,6 +63,12 @@ function Applicationdash() {
     }
     try {
       await updateApplicationStatus(applicationId, "pending");
+      // Call sendSMS function here
+      const application = applicationData.find(app => app.id === applicationId);
+      if (application) {
+        const number = application.number;
+        await sendSMSPending(number);
+      }
     } catch (error) {
       console.error("Error updating document: ", error);
     }
@@ -62,6 +79,106 @@ function Applicationdash() {
     await updateDoc(applicationRef, { status });
     fetchDataFromFirestore();
   }
+  async function sendSMSApprove(number) {
+    const myHeaders = new Headers();
+    myHeaders.append("Authorization", "App 052fd6070330ce93dfd7ebf7dc348f2c-19f3d2e8-ff84-4491-a845-2090788b3830");
+    myHeaders.append("Content-Type", "application/json");
+    myHeaders.append("Accept", "application/json");
+
+    const message = "Congratulations! Your application to MindHaven School Inc has been approved after careful review. We will be in contact with you soon to complete your admission process via email. Thank you and have a good day.";
+    const formattedNumber = number.startsWith("63") ? number : `63${number}`;
+
+    const raw = JSON.stringify({
+        "messages": [
+            {
+                "destinations": [{"to": formattedNumber}],
+                "from": "MindHaven School Inc.",
+                "text": message
+            }
+        ]
+    });
+
+    const requestOptions = {
+        method: "POST",
+        headers: myHeaders,
+        body: raw,
+        redirect: "follow"
+    };
+
+    try {
+        await fetch("https://rgz3xy.api.infobip.com/sms/2/text/advanced", requestOptions);
+    } catch (error) {
+        console.error("Error sending SMS: ", error);
+    }
+};
+async function sendSMSDeny(number) {
+  const myHeaders = new Headers();
+  myHeaders.append("Authorization", "App 052fd6070330ce93dfd7ebf7dc348f2c-19f3d2e8-ff84-4491-a845-2090788b3830");
+  myHeaders.append("Content-Type", "application/json");
+  myHeaders.append("Accept", "application/json");
+
+  const message = "Good day. Your application to MindHaven School Inc has been denied after careful review due to certain issues. We will be in contact with you soon regarding your application via email. Thank you.";
+  const formattedNumber = number.startsWith("63") ? number : `63${number}`;
+
+  const raw = JSON.stringify({
+      "messages": [
+          {
+              "destinations": [{"to": formattedNumber}],
+              "from": "MindHaven School Inc.",
+              "text": message
+          }
+      ]
+  });
+
+  const requestOptions = {
+      method: "POST",
+      headers: myHeaders,
+      body: raw,
+      redirect: "follow"
+  };
+  
+
+  try {
+      await fetch("https://rgz3xy.api.infobip.com/sms/2/text/advanced", requestOptions);
+  } catch (error) {
+      console.error("Error sending SMS: ", error);
+  }
+};
+async function sendSMSPending(number) {
+  const myHeaders = new Headers();
+  myHeaders.append("Authorization", "App 052fd6070330ce93dfd7ebf7dc348f2c-19f3d2e8-ff84-4491-a845-2090788b3830");
+  myHeaders.append("Content-Type", "application/json");
+  myHeaders.append("Accept", "application/json");
+
+  const message = "Good day. Your application to MindHaven School Inc has been marked pending and is currently under review. We will be in contact with you soon regarding your application via email. Thank you.";
+  const formattedNumber = number.startsWith("63") ? number : `63${number}`;
+
+  const raw = JSON.stringify({
+      "messages": [
+          {
+              "destinations": [{"to": formattedNumber}],
+              "from": "MindHaven School Inc.",
+              "text": message
+          }
+      ]
+  });
+
+  const requestOptions = {
+      method: "POST",
+      headers: myHeaders,
+      body: raw,
+      redirect: "follow"
+  };
+  
+
+  try {
+      await fetch("https://rgz3xy.api.infobip.com/sms/2/text/advanced", requestOptions);
+  } catch (error) {
+      console.error("Error sending SMS: ", error);
+  }
+};
+
+
 
   return (
     <div className="whole-contact-container">

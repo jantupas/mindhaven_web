@@ -101,18 +101,6 @@ body {
     }
   }
 
-@media (max-width: 540px) {
-    .nav-title {
-        font-size: 1rem;
-    }
-  }
-
-@media (max-width: 430px) {
-    .nav-title {
-        font-size: 0.6rem;
-    }
-  }
-
 @media (min-width: 1173px) {
   .page-link ul {
     display: flex !important;
@@ -138,17 +126,6 @@ body {
   }
 }
 
-@media (max-width: 540px) {
-  .nav-title {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 430px) {
-  .nav-title {
-    font-size: 0.6rem;
-  }
-}
 
   
 
