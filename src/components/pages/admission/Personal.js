@@ -31,13 +31,13 @@ function Personal () {
     const generateRandomNumber = () => {
         return Math.floor(1000000000 + Math.random() * 9000000000);
     };
-    const sendSMS = async () => {
+    const sendSMS = async (refno) => {
         const myHeaders = new Headers();
         myHeaders.append("Authorization", "App 052fd6070330ce93dfd7ebf7dc348f2c-19f3d2e8-ff84-4491-a845-2090788b3830");
         myHeaders.append("Content-Type", "application/json");
         myHeaders.append("Accept", "application/json");
 
-        const message = "Thank you for your interest in joining us at MindHaven School Inc. We have successfully received your application. We will be in contact with you soon regarding your application via email. Thank you and have a good day.";
+        const message = `Thank you for your interest in joining us at MindHaven School Inc. We have successfully received your application with reference number ${refno}. We will be in contact with you soon regarding your application via email. You may view the status of your application through the user dashboard. Thank you and have a good day.`;
         const formattedNumber = number.startsWith("63") ? number : `63${number}`;
 
         const raw = JSON.stringify({
@@ -71,7 +71,9 @@ function Personal () {
         if (!isConfirmed) {
             return;
         }
-    
+        
+        const refno = generateRandomNumber()
+
         try {
           const docRef = await addDoc(collection(db, "applicant_information"), {
             firstname: firstname,
@@ -84,10 +86,10 @@ function Personal () {
             username: username,
             number: number,
             status: "pending",
-            studentno: generateRandomNumber()
+            refno: refno
           });
 
-          await sendSMS(); // Send SMS notification after successfully adding applicant information to the database
+          await sendSMS(refno); // Send SMS notification after successfully adding applicant information to the database
           
           setSubmissionMessage('We have received your submission. Thank you!');
           setFirstName('');

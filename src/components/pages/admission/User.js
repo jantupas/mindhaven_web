@@ -6,7 +6,7 @@ import "./admissionstyles.css";
 
 function User() {
   const [email, setEmail] = useState("");
-  const [studentno, setStudentNo] = useState("");
+  const [refno, setRefNo] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [applicantInfo, setApplicantInfo] = useState(null);
   const navigate = useNavigate();
@@ -15,23 +15,23 @@ function User() {
     e.preventDefault();
 
     try {
-      const studentNumber = parseInt(studentno, 10);
+      const refNumber = parseInt(refno, 10);
 
       const q = query(
         collection(db, "applicant_information"),
         where("email", "==", email),
-        where("studentno", "==", studentNumber)
+        where("refno", "==", refNumber)
       );
 
       const querySnapshot = await getDocs(q);
 
       if (querySnapshot.empty) {
-        setErrorMessage("Incorrect email or student number.");
+        setErrorMessage("Incorrect email or reference number.");
         setApplicantInfo(null); 
       } else {
         querySnapshot.forEach((doc) => {
           setApplicantInfo(doc.data());
-          navigate(`/userdash?email=${email}&studentno=${studentNumber}`);
+          navigate(`/userdash?email=${email}&refno=${refNumber}`);
         });
       }
     } catch (error) {
@@ -62,14 +62,14 @@ function User() {
               />
             </div>
             <div className="login-content">
-              <label className="admin-form-label">Student Number</label>
+              <label className="admin-form-label">Reference Number</label>
               <input
                 type="text"
                 required
                 maxLength={100}
                 className="admin-input"
-                value={studentno}
-                onChange={(e) => setStudentNo(e.target.value)}
+                value={refno}
+                onChange={(e) => setRefNo(e.target.value)}
               />
             </div>
           </div>

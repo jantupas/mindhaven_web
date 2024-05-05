@@ -26,14 +26,14 @@ function UserDash() {
   useEffect(() => {
     const searchParams = new URLSearchParams(location.search);
     const email = searchParams.get("email");
-    const studentno = parseInt(searchParams.get("studentno"), 10);
+    const refno = parseInt(searchParams.get("refno"), 10);
 
     const fetchData = async () => {
       try {
         const q = query(
           collection(db, "applicant_information"),
           where("email", "==", email),
-          where("studentno", "==", studentno)
+          where("refno", "==", refno)
         );
         const querySnapshot = await getDocs(q);
 
@@ -81,14 +81,14 @@ function UserDash() {
                     <th className="app-table-title">Email</th>
                     <th className="app-table-title">Username</th>
                     <th className="app-table-title">Number</th>
-                    <th className="app-table-title">Student Number</th>
+                    <th className="app-table-title">Reference Number</th>
                 </tr>
                 <tr>
                     <td className="app-table-content">{applicantInfo.nationality}</td>
                     <td className="app-table-content">{applicantInfo.email}</td>
                     <td className="app-table-content">{applicantInfo.username}</td>
                     <td className="app-table-content">{applicantInfo.number}</td>
-                    <td className="app-table-content">{applicantInfo.studentno}</td>
+                    <td className="app-table-content">{applicantInfo.refno}</td>
                 </tr>
                 </tbody>
             </table>
