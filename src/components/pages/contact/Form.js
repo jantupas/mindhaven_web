@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
-import "./contactstyles.css";
+import React, { useState, useEffect } from "react"
+import emailjs from "emailjs-com"
+import "./contactstyles.css"
 
 function Form() {
     const [isSubmitted, setIsSubmitted] = useState(false);
@@ -25,18 +26,37 @@ function Form() {
     function handleSubmit(event) {
         event.preventDefault();
         const isConfirmed = window.confirm("Are you sure you want to submit?");
+        
+        // Check if required fields are empty
+        if (
+            formData.firstName.trim() === "" ||
+            formData.lastName.trim() === "" ||
+            formData.email.trim() === "" ||
+            formData.subject.trim() === "" ||
+            formData.message.trim() === ""
+        ) {
+            alert("Please fill out all required fields.");
+            return; // Exit the function if any required field is empty
+        }
+    
         if (isConfirmed) {
-            setIsSubmitted(true);
-            setFormData({
-                firstName: "",
-                lastName: "",
-                email: "",
-                phone: "",
-                subject: "",
-                message: ""
-            });
+            // Send email using EmailJS
+            emailjs.send("service_nr6nnpa", "template_eyiz2yx", formData, "CoedYHg7AJoRl9Cmo")
+                .then(() => {
+                    setIsSubmitted(true);
+                    setFormData({
+                        firstName: "",
+                        lastName: "",
+                        email: "",
+                        phone: "",
+                        subject: "",
+                        message: ""
+                    });
+                })
+                .catch(error => console.error("Error sending email:", error));
         }
     }
+    
 
     function handleChange(event) {
         const { name, value } = event.target;
