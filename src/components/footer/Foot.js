@@ -20,7 +20,6 @@ function Foot() {
             <li><Link to="./about#vismis" className="footer-item">Mission & Vision</Link></li>
             <li><Link to="./about" className="footer-item">School Background</Link></li>
             <li><Link to="./about" className="footer-item">Faculty and Staff</Link></li>
-            <li><Link to="./about" className="footer-item">Admission Policies</Link></li>
           </ul>
         </div>
         <div className="footer-section">
