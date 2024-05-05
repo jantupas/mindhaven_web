@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { db } from "../../../firebase";
+import { getDocs, collection, query, where } from "firebase/firestore";
 import "./admissionstyles.css";
 
 function Admin() {
@@ -8,12 +10,27 @@ function Admin() {
   const [errorMessage, setErrorMessage] = useState("");
   const navigate = useNavigate();
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-    if (username === "admin" && password === "admin") {
-      navigate('/announcedash');
+
+    // Query the 'admin' collection for the provided username
+    const adminQuery = query(collection(db, "admin"), where("username", "==", username));
+    const querySnapshot = await getDocs(adminQuery);
+
+    // Check if username exists
+    if (!querySnapshot.empty) {
+      // Username exists, check password
+      const adminData = querySnapshot.docs[0].data();
+      if (adminData.password === password) {
+        // Password matches, navigate to '/announcedash'
+        navigate('/announcedash');
+      } else {
+        // Password does not match
+        setErrorMessage("Incorrect password.");
+      }
     } else {
-      setErrorMessage("Incorrect username or password.");
+      // Username does not exist
+      setErrorMessage("Username does not exist.");
     }
   };
 
