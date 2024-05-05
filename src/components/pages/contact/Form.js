@@ -26,19 +26,6 @@ function Form() {
     function handleSubmit(event) {
         event.preventDefault();
         const isConfirmed = window.confirm("Are you sure you want to submit?");
-        
-        // Check if required fields are empty
-        if (
-            formData.firstName.trim() === "" ||
-            formData.lastName.trim() === "" ||
-            formData.email.trim() === "" ||
-            formData.subject.trim() === "" ||
-            formData.message.trim() === ""
-        ) {
-            alert("Please fill out all required fields.");
-            return; // Exit the function if any required field is empty
-        }
-    
         if (isConfirmed) {
             // Send email using EmailJS
             emailjs.send("service_nr6nnpa", "template_eyiz2yx", formData, "CoedYHg7AJoRl9Cmo")
@@ -55,8 +42,7 @@ function Form() {
                 })
                 .catch(error => console.error("Error sending email:", error));
         }
-    }
-    
+    }   
 
     function handleChange(event) {
         const { name, value } = event.target;
@@ -71,40 +57,43 @@ function Form() {
             <form className="contact-form" onSubmit={handleSubmit}>
                 <div className="first-form">
                     <div className="form-content">
-                        <label>First Name</label>
+                        <label>*First Name</label>
                         <input 
                             type="text"
                             className="form-input"
                             maxLength={100}
                             name="firstName"
                             value={formData.firstName}
+                            required
                             onChange={handleChange}
                         />
                     </div>
                     <div className="form-content">
-                        <label>Last Name</label>
+                        <label>*Last Name</label>
                         <input 
                             type="text"
                             className="form-input"
                             maxLength={100}
                             name="lastName"
                             value={formData.lastName}
+                            required
                             onChange={handleChange}
                         />
                     </div>
                     <div className="form-content">
-                        <label>Email</label>
+                        <label>*Email</label>
                         <input 
                             type="email"
                             className="form-input"
                             maxLength={100}
                             name="email"
                             value={formData.email}
+                            required
                             onChange={handleChange}
                         />
                     </div>
                     <div className="form-content">
-                        <label>Phone (Optional)</label>
+                        <label>Phone</label>
                         <input 
                             type="tel"
                             className="form-input"
@@ -116,24 +105,26 @@ function Form() {
                 </div>
                 <div className="second-form">
                     <div className="form2-content">
-                        <label>Subject</label>
+                        <label>*Subject</label>
                         <input 
                             type="text"
                             className="form2-input"
                             maxLength={100}
                             name="subject"
                             value={formData.subject}
+                            required
                             onChange={handleChange}
                         />
                     </div>
                     <div className="form2-content">
-                        <label>Message</label>
+                        <label>*Message</label>
                         <textarea 
                             id="form-message"
                             className="textarea-message"
                             rows="5"
                             name="message"
                             value={formData.message}
+                            required
                             onChange={handleChange}
                         />
                     </div>
