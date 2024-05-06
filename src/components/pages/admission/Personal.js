@@ -3,6 +3,7 @@ import "./admissionstyles.css"
 import { collection, addDoc } from "firebase/firestore"
 import { db } from "../../../firebase"
 import { useState, useEffect } from 'react'
+import emailjs from "emailjs-com"
 
 function Personal () {
 
@@ -31,6 +32,21 @@ function Personal () {
     const generateRandomNumber = () => {
         return Math.floor(1000000000 + Math.random() * 9000000000);
     };
+
+    const sendEmail = async (recipientEmail, refno) => {
+        try {
+            await emailjs.send(
+                'service_nr6nnpa', 
+                'template_807rgfv', 
+                { to_email: recipientEmail, refno: refno }, 
+                'CoedYHg7AJoRl9Cmo' 
+            );
+            console.log('Email sent successfully!');
+        } catch (error) {
+            console.error('Error sending email:', error);
+        }
+    };
+    
     const sendSMS = async (refno) => {
         const myHeaders = new Headers();
         myHeaders.append("Authorization", "App 052fd6070330ce93dfd7ebf7dc348f2c-19f3d2e8-ff84-4491-a845-2090788b3830");
@@ -89,7 +105,8 @@ function Personal () {
             refno: refno
           });
 
-          await sendSMS(refno); // Send SMS notification after successfully adding applicant information to the database
+          await sendSMS(refno);
+          await sendEmail(email, refno);
           
           setSubmissionMessage('We have received your submission. Thank you!');
           setFirstName('');

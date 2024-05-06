@@ -11,7 +11,7 @@ function Foot() {
           <ul>
             <li><Link to="./homepage" className="footer-item">Home</Link></li>
             <li><Link to="./announcement" className="footer-item">Announcement</Link></li>
-            <li>Admission</li>
+            <li><Link to="./admission" className="footer-item">Admission</Link></li>
           </ul>
         </div>
         <div className="footer-section">
